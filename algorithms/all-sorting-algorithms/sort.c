@@ -8,14 +8,13 @@ void printArray(int *arr, int n) {
 }
 
 void bubbleSort(int *arr, int n) {
-    printf("Starting Bubble Sort");
-
+    printf("\n Bubble sort");
     int temp;
     int isSorted = 1;
-    for(int i = 0; i < n; i++) {
-        for(int j = 0; j < n-1-i; j++) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n-1-i; j++) {
             if (arr[j] > arr[j+1]) {
-                temp = arr[j+1]; 
+                temp = arr[j+1];
                 arr[j+1] = arr[j];
                 arr[j] = temp;
                 isSorted = 0;
@@ -28,15 +27,13 @@ void bubbleSort(int *arr, int n) {
     }
 }
 
-void insertionSort(int *arr, int n) {
-    printf("Starting  Insertion Sort\n");
-
+void insertionSort(int *arr, int n) { //7 ,1, 3, 4, 2, 5, 8, 11, 6, 24, 20
     int key, j;
-    for(int i=0; i<n; i++) {
+    for (int i = 1; i < n; i++) {
         key = arr[i];
-        j = i-1;
+        j = i - 1;
 
-        while(j >= 0 && arr[j] > key) {
+        while (j >= 0 && arr[j] > key) {
             arr[j+1] = arr[j];
             j--;
         }
@@ -52,15 +49,14 @@ void selectionSort(int *arr, int n) {
 }
 
 int main() {
-    int arr1[] = {7 ,1, 3, 4, 2, 5, 8, 11, 6, 24, 20};
+    int arr[] = {7 ,1, 3, 4, 2, 5, 8, 11, 6, 24, 20};
     int arr2[] = {7 ,1, 3, 4, 2, 5, 8, 11, 6, 24, 20};
-    int arr1[] = {7 ,1, 3, 4, 2, 5, 8, 11, 6, 24, 20};
     int n = 11;
-    printArray(arr1, n);
-    printf("\n");
-    bubbleSort(arr1, n);
-    printf("\n");
-    printArray(arr1, n);
+    // printArray(arr, n);
+    // printf("\n");
+    // bubbleSort(arr, n);
+    // printArray(arr, n);
+
     printArray(arr2, n);
     printf("\n");
     insertionSort(arr2, n);
